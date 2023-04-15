@@ -7,6 +7,7 @@ use App\Models\Information;
 use App\Models\Contact;
 use App\Models\ProjectImage;
 use App\Models\ProjectDetails;
+use App\Models\masterPlan;
 use App\Models\Project;
 
 class BackendController extends Controller
@@ -37,7 +38,9 @@ class BackendController extends Controller
 
     public function projectSubmit(Request $request)
     {
-
+        // echo "<pre>";
+        // print_r($request->all());
+        // die;
         $project = new Project();
         if ($request->hasFile('cover_photo')) {
             $file = $request->file('cover_photo');
@@ -51,6 +54,8 @@ class BackendController extends Controller
         $project->one_bhk = $request->one_bhk;
         $project->two_bhk = $request->two_bhk;
         $project->three_bhk = $request->three_bhk;
+        $project->location_url = $request->location_url;
+        $project->features_menities = implode(",",$request->features_menities);
         $project->cover_photo = $destinationPath."/".$file->getClientOriginalName();
         $project->status = 1;
         $project->save();
@@ -113,6 +118,27 @@ class BackendController extends Controller
                 ];
             }
             $applocatin = ProjectImage::insert($coverPhotoArr);
+
+        }
+
+        if ($request->hasFile('master_plan_image')) {
+            $coverPhotoArr = [];
+
+            for ($k=0; $k <count($request->master_plan_image) ; $k++) { 
+
+                //////////////////////// pan card uploads //////////////////////
+                $fileback = $request->file('master_plan_image');
+                $destinationmaster_plan_image= 'master_plan_image';
+                $fileback[$k]->move($destinationmaster_plan_image,$fileback[$k]->getClientOriginalName());
+                ////////////////  AAdher card uploads //////////////////////
+
+                $coverPhotoArr [$k] = [
+                    "projects_id"=> $project->id,
+                    "master_plan_image" => $destinationmaster_plan_image."/".$fileback[$k]->getClientOriginalName(),
+                    "status" => 1,
+                ];
+            }
+            $applocatin = masterPlan::insert($coverPhotoArr);
 
         }
         return redirect()->back()->with('success', 'Your Application save successfully !!');

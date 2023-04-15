@@ -11,7 +11,7 @@
                             <img src="{{url($projectDetail->cover_photo)}}" alt="img">
                         </div>
                         <div class="property-wrap-details">
-                            <h4 style="text-align:center;"><a href="">Eco stay</a></h4>
+                            <h4 style="text-align:center;">{{$projectDetail->site_name}}</h4>
                             <span class="price" style="font-size: 13px;text-align:center;">{{$projectDetail->location}}</span>
                             <div class="meta meta-2">
                                 @foreach($projectDetail->details as $detail)

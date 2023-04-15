@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('one_bhk')->nullable();
             $table->string('two_bhk')->nullable();
             $table->string('three_bhk')->nullable();
+            $table->string('location_url')->nullable();
+            $table->string('features_menities')->nullable();
             $table->string('cover_photo')->nullable();
             $table->string('status');
             $table->timestamps();

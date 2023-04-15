@@ -79,6 +79,8 @@
                     <div class="location-area mt-5">
                         <h5 class="sm-title">Features / Amenities </h5>
                         <div class="row">
+                            @foreach(explode(",", $projectDetails->features_menities) as $features)
+                             @if($features == "Road")
                             <div class="col-lg-4 col-md-4 col-6 mb-4">
                                 <div class="media">
                                     <div class="icon">
@@ -90,6 +92,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @elseif($features == "School")
                             <div class="col-lg-4 col-md-4 col-6  mb-4">
                                 <div class="media">
                                     <div class="icon">
@@ -101,6 +104,8 @@
                                     </div>
                                 </div>
                             </div>
+                            @elseif($features == "College")
+
                             <div class="col-lg-4 col-md-4 col-6  mb-4">
                                 <div class="media">
                                     <div class="icon">
@@ -112,6 +117,8 @@
                                     </div>
                                 </div>
                             </div> 
+                            @elseif($features == "Shopping")
+
                             <div class="col-lg-4 col-md-4 col-6  mb-4">
                                 <div class="media">
                                     <div class="icon">
@@ -123,6 +130,8 @@
                                     </div>
                                 </div>
                             </div>
+                            @elseif($features == "University")
+
                             <div class="col-lg-4 col-md-4 col-6  mb-4">
                                 <div class="media">
                                     <div class="icon">
@@ -134,6 +143,8 @@
                                     </div>
                                 </div>
                             </div>
+                            @elseif($features == "Hospital")
+
                             <div class="col-lg-4 col-md-4 col-6  mb-4">
                                 <div class="media">
                                     <div class="icon">
@@ -145,6 +156,8 @@
                                     </div>
                                 </div>
                             </div>
+                            @elseif($features == "CCTV")
+
                             <div class="col-lg-4 col-md-4 col-6  mb-4">
                                 <div class="media">
                                     <div class="icon">
@@ -156,6 +169,8 @@
                                     </div>
                                 </div>
                             </div>
+                            @elseif($features == "Swimming Pool")
+
                             <div class="col-lg-4 col-md-4 col-6  mb-4">
                                 <div class="media">
                                     <div class="icon">
@@ -167,6 +182,8 @@
                                     </div>
                                 </div>
                             </div>
+                            @elseif($features == "Gymnasium")
+
                             <div class="col-lg-4 col-md-4 col-6  mb-4">
                                 <div class="media">
                                     <div class="icon">
@@ -178,6 +195,8 @@
                                     </div>
                                 </div>
                             </div>
+                            @elseif($features == "Indoor Games")
+
                             <div class="col-lg-4 col-md-4 col-6  mb-4">
                                 <div class="media">
                                     <div class="icon">
@@ -189,6 +208,8 @@
                                     </div>
                                 </div>
                             </div>
+                            @elseif($features == "24x7 Security")
+
                             <div class="col-lg-4 col-md-4 col-6  mb-4">
                                 <div class="media">
                                     <div class="icon">
@@ -200,15 +221,17 @@
                                     </div>
                                 </div>
                             </div>
+                            @endif
+                            @endforeach
                         </div>                            
                     </div> 
 
                     <div class="location-area mt-5">
                         <h5 class="sm-title">Master Plan </h5>
                         <div class="row">
-                        @foreach($projectDetails->image as $projectDetail)
+                        @foreach($projectDetails->master as $projectDetail)
                         <div class="col-md-6 mb-4">
-                                <img class="w-100 class_gallery" src="{{url ($projectDetail->bakgroung_image)}}">
+                                <img class="w-100 class_gallery" src="{{url ($projectDetail->master_plan_image)}}">
                                 <!-- <p>Site One</p> -->
                             </div>
                         @endforeach

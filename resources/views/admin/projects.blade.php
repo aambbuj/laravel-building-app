@@ -21,7 +21,7 @@
                                             <option> Select</option>
                                             <option value="ongoing">Ongoing Project</option>
                                             <option value="complete">Complete Project</option>
-                                            <option value="upcomming">Upcomming Project</option>
+                                            <option value="upcoming">Upcomming Project</option>
                                         </select>                                            
                                     </div>
                                 </div>
@@ -187,10 +187,109 @@
 
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Location</label>
+                                                <label>Address</label>
                                                 <input type="text" class="form-control" placeholder="Location" name="location">
                                             </div>
                                         </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Location Url</label>
+                                                <input type="text" class="form-control" placeholder="Location Url" name="location_url">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Master Plan Immages</label>
+                                                <input type="file" multiple class="form-control" placeholder="Location Url" name="master_plan_image[]">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Features / Amenities</label>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="Road" name="features_menities[]">
+                                                    <label class="form-check-label">
+                                                        Road
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="School" name="features_menities[]">
+                                                    <label class="form-check-label">
+                                                        School
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="College" name="features_menities[]">
+                                                    <label class="form-check-label">
+                                                        College
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="Shopping" name="features_menities[]">
+                                                    <label class="form-check-label">
+                                                        Shopping
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="University" name="features_menities[]">
+                                                    <label class="form-check-label">
+                                                        University
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="Hospital" name="features_menities[]">
+                                                    <label class="form-check-label">
+                                                        
+                                                        Hospital
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="CCTV" name="features_menities[]">
+                                                    <label class="form-check-label">
+                                                        CCTV
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="Swimming Pool" name="features_menities[]">
+                                                    <label class="form-check-label">
+                                                        Swimming Pool
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="Gymnasium" name="features_menities[]">
+                                                    <label class="form-check-label">
+                                                        Gymnasium
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="Indoor Games" name="features_menities[]">
+                                                    <label class="form-check-label">
+                                                        Indoor Games
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="24x7 Security" name="features_menities[]">
+                                                    <label class="form-check-label">
+                                                        24x7 Security
+                                                    </label>
+                                                </div>
+
+                                                <!-- <input type="text" class="form-control" placeholder="Features / Amenities" value="" name="features_menities[]"> -->
+                                            </div>
+                                        </div>
+
                                     </div>
 
                                     <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
