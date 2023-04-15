@@ -21,4 +21,10 @@ class Project extends Model
         return $this->hasMany(ProjectDetails::class, 'projects_id', 'id');
 
     }
+
+    public function master()
+    {
+        return $this->hasMany(masterPlan::class, 'projects_id', 'id');
+
+    }
 }

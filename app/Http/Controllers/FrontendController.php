@@ -15,7 +15,7 @@ class FrontendController extends Controller
 {
     public function index()
     {
-      $projectDetails  = Project::where('project_type','complete')->with(['image','details'])->get();
+      $projectDetails  = Project::where('project_type','complete')->with(['image','details','master'])->get();
     //   echo "<pre>";
     //   print_r($projectDetails);
         return view('index',compact('projectDetails'));
@@ -23,7 +23,7 @@ class FrontendController extends Controller
 
     public function ongoingPage()
     {
-      $projectDetails  = Project::where('project_type','ongoing')->with(['image','details'])->get();
+      $projectDetails  = Project::where('project_type','ongoing')->with(['image','details','master'])->get();
     //   echo "<pre>";
     //   print_r($projectDetails);
         return view('ongoing',compact('projectDetails'));
@@ -31,7 +31,7 @@ class FrontendController extends Controller
 
     public function completePage()
     {
-      $projectDetails  = Project::where('project_type','complete')->with(['image','details'])->get();
+      $projectDetails  = Project::where('project_type','complete')->with(['image','details','master'])->get();
     //   echo "<pre>";
     //   print_r($projectDetails);
         return view('complete',compact('projectDetails'));
@@ -39,7 +39,7 @@ class FrontendController extends Controller
 
     public function upcomingPage()
     {
-      $projectDetails  = Project::where('project_type','upcoming')->with(['image','details'])->get();
+      $projectDetails  = Project::where('project_type','upcoming')->with(['image','details','master'])->get();
     //   echo "<pre>";
     //   print_r($projectDetails);
         return view('upcoming',compact('projectDetails'));
@@ -128,9 +128,9 @@ class FrontendController extends Controller
 
     public function detailsView(Request $request , $id)
     {
-        $projectDetails  = Project::where('id',$id)->with(['image','details'])->first();
+        $projectDetails  = Project::where('id',$id)->with(['image','details','master'])->first();
         //   echo "<pre>";
-        //   print_r($projectDetails);
+          $features_menities =  explode(",", $projectDetails['features_menities']);
         return view('details',compact('projectDetails'));
     }
 }
