@@ -1,19 +1,4 @@
-/*!
-
- =========================================================
- * Light Bootstrap Dashboard - v1.4.0
- =========================================================
-
- * Product Page: http://www.creative-tim.com/product/light-bootstrap-dashboard
- * Copyright 2017 Creative Tim (http://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE.md)
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
-/*      light colors         */
+ 
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -239,7 +224,7 @@ input:focus {
     bottom: 0;
     right: auto;
     left: 0;
-    width: 260px;
+    width: 210px;
     display: block;
     z-index: 1;
     color: #fff;
@@ -253,7 +238,7 @@ input:focus {
     max-height: calc(100vh - 75px);
     min-height: 100%;
     overflow: auto;
-    width: 260px;
+    width: 210px;
     z-index: 4;
     padding-bottom: 100px;
 }
@@ -351,13 +336,13 @@ input:focus {
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    margin-left: 45px;
+    margin-left: 37px;
 }
 
 .sidebar .nav i {
-    font-size: 28px;
+    font-size: 23px;
     float: left;
-    margin-right: 15px;
+    margin-right: 0;
     line-height: 30px;
     width: 30px;
     text-align: center;
@@ -498,21 +483,21 @@ input:focus {
 }
 
 .sidebar[data-color="purple"]:after {
-    background: #9368E9;
-    background: -moz-linear-gradient(top, #9368E9 0%, #943bea 100%);
+    background: #02245B !important;
+    /* background: -moz-linear-gradient(top, #9368E9 0%, #943bea 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9368E9), color-stop(100%, #943bea));
     background: -webkit-linear-gradient(top, #9368E9 0%, #943bea 100%);
     background: -o-linear-gradient(top, #9368E9 0%, #943bea 100%);
     background: -ms-linear-gradient(top, #9368E9 0%, #943bea 100%);
     background: linear-gradient(to bottom, #9368E9 0%, #943bea 100%);
-    background-size: 150% 150%;
+    background-size: 150% 150%; */
 }
 
 .main-panel {
     position: relative;
     z-index: 2;
     float: right;
-    width: calc(100% - 260px);
+    width: calc(100% - 210px);
 }
 
 .main-panel > .content {
@@ -1734,12 +1719,12 @@ fieldset[disabled] .btn-neutral.active {
     font-size: 16px;
 }
 
-.navbar.fixed {
+/* .navbar.fixed {
     width: calc(100% - $sidebar-width);
     right: 0;
     left: auto;
     border-radius: 0;
-}
+} */
 
 .navbar-nav > li > .dropdown-menu {
     border-radius: 10px;
@@ -2280,7 +2265,7 @@ fieldset[disabled] .btn-neutral.active {
 .card label {
     font-size: 12px;
     margin-bottom: 5px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .card .title {
@@ -3274,15 +3259,15 @@ fieldset[disabled] .btn-neutral.active {
     body > .navbar-collapse.collapse {
         display: none !important;
     }
-    .card form [class*="col-"] {
+    /* .card form [class*="col-"] {
         padding: 6px;
-    }
-    .card form [class*="col-"]:first-child {
+    } */
+    /* .card form [class*="col-"]:first-child {
         padding-left: 15px;
     }
     .card form [class*="col-"]:last-child {
         padding-right: 15px;
-    }
+    } */
 }
 
 /*          Changes for small display      */

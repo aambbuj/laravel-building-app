@@ -1,5 +1,10 @@
 @extends('layouts')
 @section('content')
+<style>
+    .navbar-light {
+        background-color: #02245b !important;
+    }
+</style>
 <!-- <div class="container-fluid page-header py-3 mb-5 wow fadeIn">
         <div class="container py-5">
             <h1 class="display-3 text-white animated slideInRight">About Us</h1>
