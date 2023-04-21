@@ -17,6 +17,24 @@ class BackendController extends Controller
         return view('admin.index');
     }
 
+    public function editPoject()
+    { 
+        return view('admin.edit-project');
+    }
+    public function application()
+    { 
+        return view('admin.application');
+    }
+    public function booking()
+    { 
+        return view('admin.booking');
+    }
+
+    public function login()
+    { 
+        return view('admin.login');
+    }
+
     public function Inquerys()
     {
         $inqueys = Information::orderBy('id', 'DESC')->get();

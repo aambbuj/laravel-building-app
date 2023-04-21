@@ -1,15 +1,30 @@
 @extends('admin.adminLayouts')
 @section('content')
+<style>
+    nav.navbar.navbar-default.navbar-fixed {
+        position: fixed;
+        top: 0px;
+        display: block;
+        z-index: 9999;
+        width: 100%;
+    }
+    .container-fluid.mt-5 {
+        margin-top: 60px;
+    }
+</style>
+<nav class="navbar navbar-default navbar-fixed">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" >Contact Details</a>
+        </div> 
+    </div>
+</nav>
+    <div class="content mt-5">
+        <div class="container-fluid mt-5">
 
-    <div class="content">
-        <div class="container-fluid">
-
-        <div class="row">
+        <div class="row mt-5">
                     <div class="col-md-12">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Contact Details</h4>
-                            </div>
+                        <div class="card"> 
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>

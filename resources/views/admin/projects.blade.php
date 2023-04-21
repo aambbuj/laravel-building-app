@@ -213,7 +213,7 @@
 
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label>Master Plan Immages</label>
+                                            <label>Master Plan Immages (Select one or multiple file)</label>
                                             <input type="file" multiple class="form-control" placeholder="Location Url" name="master_plan_image[]">
                                         </div>
                                     </div>
@@ -305,7 +305,7 @@
 
                                 </div>
 
-                                <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
+                                <button type="submit" class="btn btn-info btn-fill pull-right">Add Project</button>
                                 <div class="clearfix"></div>
                             </form>
                         </div>
