@@ -1,38 +1,46 @@
 @extends('layouts')
 @section('content')
-
-<div class="container">
+<style>
+    .navbar-light {
+        background-color: #02245b !important;
+    }
+</style>
+<div class="container mt-5">
         <div class="row justify-content-md-center">
             <div class="col-lg-8">
                 <form action="{{route('application-form')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="row g-3" > 
-                    <div id="row11">
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name="applicany_name[]" placeholder="Your Name">
-                                <label for="name">Applicent Name</label>
+                        <div id="row11">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="applicany_name[]" placeholder="Your Name">
+                                        <label for="name">Applicent Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" name="phone_number[]" placeholder="Your Phone Number">
+                                        <label for="email">Phone Number</label>
+                                    </div>
+                                </div> 
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control" name="upload_pan[]" >
+                                        <label for="pan" style="color: black">Upload PAN Image</label>
+                                    </div>
+                                </div>  
+                                <div  class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control" name="upload_aadher[]" >
+                                        <label for="aadhar" style="color: black">Upload AADHAR Image</label>
+                                    </div>
+                                </div>
                             </div>
+                            
+                             
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                <input type="number" class="form-control" name="phone_number[]" placeholder="Your Phone Number">
-                                <label for="email">Phone Number</label>
-                            </div>
-                        </div> 
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                <input type="file" class="form-control" name="upload_pan[]" >
-                                <label for="pan" style="color: black">Upload PAN Image</label>
-                            </div>
-                        </div>  
-                        <div  class="col-md-6">
-                            <div class="form-floating">
-                                <input type="file" class="form-control" name="upload_aadher[]" >
-                                <label for="aadhar" style="color: black">Upload AADHAR Image</label>
-                            </div>
-                        </div> 
-                    </div>
                         <div id="newinput"></div> 
                         <div class="col-md-12">
                             <span class="btn btn-primary js-add--exam-row" id="rowAdder">Add More</span>
@@ -85,30 +93,32 @@
             console.log()
             newRowAdd =
                     `<div id="row11">
+                        <div class="row"> 
                         <div class="col-md-6">
-                            <div class="form-floating">
+                            <div class="form-floating mb-3">
                                 <input type="text" class="form-control" name="applicany_name[]" placeholder="Your Name">
                                 <label for="name">Applicent Name</label>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-floating">
+                            <div class="form-floating mb-3">
                                 <input type="number" class="form-control" name="phone_number[]" placeholder="Your Phone Number">
                                 <label for="email">Phone Number</label>
                             </div>
                         </div> 
                         <div class="col-md-6">
-                            <div class="form-floating">
+                            <div class="form-floating mb-3">
                                 <input type="file" class="form-control" name="upload_pan[]" >
                                 <label for="pan" style="color: black">Upload PAN Image</label>
                             </div>
                         </div>  
                         <div  class="col-md-6">
-                            <div class="form-floating">
+                            <div class="form-floating mb-3">
                                 <input type="file" class="form-control" name="upload_aadher[]" >
                                 <label for="aadhar" style="color: black">Upload AADHAR Image</label>
                             </div>
                         </div> 
+                        </div>
                     </div>` ;
 
             $('#newinput').append(newRowAdd);

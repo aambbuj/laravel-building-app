@@ -1,6 +1,10 @@
 @extends('layouts')
 @section('content')
-
+<style>
+    .navbar-light {
+        background-color: #02245b !important;
+    }
+</style>
      <!-- Contact Start -->
      <div class="container-xxl py-5">
         <div class="container">

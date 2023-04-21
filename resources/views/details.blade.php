@@ -1,6 +1,10 @@
 @extends('layouts')
 @section('content')
-
+<style>
+    .navbar-light {
+        background-color: #02245b !important;
+    }
+</style>
 
     <div class="container">
         <div class="row">

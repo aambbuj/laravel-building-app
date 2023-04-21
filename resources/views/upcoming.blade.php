@@ -1,5 +1,10 @@
 @extends('layouts')
 @section('content')
+<style>
+    .navbar-light {
+        background-color: #02245b !important;
+    }
+</style>
 <div class="container mt-5">
         <div class="row justify-content-md-center">
         @foreach($projectDetails as $projectDetail)
