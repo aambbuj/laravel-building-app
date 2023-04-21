@@ -28,5 +28,6 @@ Route::group(['prefix' => 'admin'], function()
     Route::get('edit-project',[BackendController::class,'editPoject'])->name('admin.edit-project');
     Route::get('application',[BackendController::class,'application'])->name('admin.application');
     Route::get('booking',[BackendController::class,'booking'])->name('admin.booking');
+    Route::get('view-ongoing-project',[BackendController::class,'viewOngoingProject'])->name('admin.view-ongoing-project');
 
 });

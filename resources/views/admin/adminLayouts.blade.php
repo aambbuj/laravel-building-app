@@ -73,7 +73,7 @@
                     </label>
                     <div class="menuTab-content">
                         <ul class="subMenu_sttle">
-                            <li>Ongoing Project</li>
+                            <li><a style="color: black;" href="{{route('admin.view-ongoing-project')}}">Ongoing Project</a></li>
                             <li>Complete Project</li>
                             <li>Upcoming Project</li>
                         </ul>

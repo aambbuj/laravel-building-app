@@ -21,6 +21,10 @@ class BackendController extends Controller
     { 
         return view('admin.edit-project');
     }
+    public function viewOngoingProject()
+    { 
+        return view('admin.view-ongoing-project');
+    }
     public function application()
     { 
         return view('admin.application');
