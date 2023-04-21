@@ -77,233 +77,230 @@
                                         <textarea class="form-control" placeholder="Enter Site Details" name="site_details"></textarea>
                                     </div>
                                 </div>
-                            </div>
-                             
+                            </div> 
 
-                                 
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>1 BHK</label>
-                                            <select class="form-control" placeholder="Home Address" name="one_bhk">
-                                                <option> Select</option>
-                                                <option value="yes">Yes</option>
-                                                <option value="no">No</option>
-                                            </select>
-                                        </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>1 BHK</label>
+                                        <select class="form-control" placeholder="Home Address" name="one_bhk">
+                                            <option> Select</option>
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </select>
                                     </div>
-
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Type</label>
-                                            <input type="text" class="form-control" placeholder="Type" name="one_bhk_type">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Bedroom</label>
-                                            <input type="text" class="form-control" placeholder="Enter Bedroom" name="one_bhk_bedroom">
-
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Bathroom</label>
-                                            <input type="text" class="form-control" placeholder="Site Name" name="one_bhk_bathroom">
-
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>SQFT</label>
-                                            <input type="text" class="form-control" placeholder="sqft" name="one_bhk_sqft">
-
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>2 BHK</label>
-                                            <select class="form-control" placeholder="Home Address" name="two_bhk">
-                                                <option> Select</option>
-                                                <option value="yes">Yes</option>
-                                                <option value="no">No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Type</label>
-                                            <input type="text" class="form-control" placeholder="Type" name="two_bhk_type">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Bedroom</label>
-                                            <input type="text" class="form-control" placeholder="Enter Bedroom" name="two_bhk_bedroom">
-
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Bathroom</label>
-                                            <input type="text" class="form-control" placeholder="Site Name" name="two_bhk_bathroom">
-
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>SQFT</label>
-                                            <input type="text" class="form-control" placeholder="sqft" name="two_bhk_sqft">
-
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>3 BHK</label>
-                                            <select class="form-control" placeholder="Home Address" name="three_bhk">
-                                                <option> Select</option>
-                                                <option value="yes">Yes</option>
-                                                <option value="no">No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Type</label>
-                                            <input type="text" class="form-control" placeholder="Type" name="three_bhk_type">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Bedroom</label>
-                                            <input type="text" class="form-control" placeholder="Enter Bedroom" name="three_bhk_bedroom">
-
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Bathroom</label>
-                                            <input type="text" class="form-control" placeholder="Site Name" name="three_bhk_bathroom">
-
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>SQFT</label>
-                                            <input type="text" class="form-control" placeholder="sqft" name="three_bhk_sqft">
-
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>Address</label>
-                                            <input type="text" class="form-control" placeholder="Location" name="location">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>Location Url</label>
-                                            <input type="text" class="form-control" placeholder="Location Url" name="location_url">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>Master Plan Immages (Select one or multiple file)</label>
-                                            <input type="file" multiple class="form-control" placeholder="Location Url" name="master_plan_image[]">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>Features / Amenities</label>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="Road" name="features_menities[]">
-                                                <label class="form-check-label">
-                                                    Road
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="School" name="features_menities[]">
-                                                <label class="form-check-label">
-                                                    School
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="College" name="features_menities[]">
-                                                <label class="form-check-label">
-                                                    College
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="Shopping" name="features_menities[]">
-                                                <label class="form-check-label">
-                                                    Shopping
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="University" name="features_menities[]">
-                                                <label class="form-check-label">
-                                                    University
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="Hospital" name="features_menities[]">
-                                                <label class="form-check-label">
-                                                    
-                                                    Hospital
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="CCTV" name="features_menities[]">
-                                                <label class="form-check-label">
-                                                    CCTV
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="Swimming Pool" name="features_menities[]">
-                                                <label class="form-check-label">
-                                                    Swimming Pool
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="Gymnasium" name="features_menities[]">
-                                                <label class="form-check-label">
-                                                    Gymnasium
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="Indoor Games" name="features_menities[]">
-                                                <label class="form-check-label">
-                                                    Indoor Games
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="24x7 Security" name="features_menities[]">
-                                                <label class="form-check-label">
-                                                    24x7 Security
-                                                </label>
-                                            </div>
-
-                                            <!-- <input type="text" class="form-control" placeholder="Features / Amenities" value="" name="features_menities[]"> -->
-                                        </div>
-                                    </div>
-
                                 </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Type</label>
+                                        <input type="text" class="form-control" placeholder="Type" name="one_bhk_type">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Bedroom</label>
+                                        <input type="text" class="form-control" placeholder="Enter Bedroom" name="one_bhk_bedroom">
+
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Bathroom</label>
+                                        <input type="text" class="form-control" placeholder="Site Name" name="one_bhk_bathroom">
+
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>SQFT</label>
+                                        <input type="text" class="form-control" placeholder="sqft" name="one_bhk_sqft">
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>2 BHK</label>
+                                        <select class="form-control" placeholder="Home Address" name="two_bhk">
+                                            <option> Select</option>
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Type</label>
+                                        <input type="text" class="form-control" placeholder="Type" name="two_bhk_type">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Bedroom</label>
+                                        <input type="text" class="form-control" placeholder="Enter Bedroom" name="two_bhk_bedroom">
+
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Bathroom</label>
+                                        <input type="text" class="form-control" placeholder="Site Name" name="two_bhk_bathroom">
+
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>SQFT</label>
+                                        <input type="text" class="form-control" placeholder="sqft" name="two_bhk_sqft">
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>3 BHK</label>
+                                        <select class="form-control" placeholder="Home Address" name="three_bhk">
+                                            <option> Select</option>
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Type</label>
+                                        <input type="text" class="form-control" placeholder="Type" name="three_bhk_type">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Bedroom</label>
+                                        <input type="text" class="form-control" placeholder="Enter Bedroom" name="three_bhk_bedroom">
+
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Bathroom</label>
+                                        <input type="text" class="form-control" placeholder="Site Name" name="three_bhk_bathroom">
+
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>SQFT</label>
+                                        <input type="text" class="form-control" placeholder="sqft" name="three_bhk_sqft">
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Address</label>
+                                        <input type="text" class="form-control" placeholder="Location" name="location">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Location Url</label>
+                                        <input type="text" class="form-control" placeholder="Location Url" name="location_url">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Master Plan Immages (Select one or multiple file)</label>
+                                        <input type="file" multiple class="form-control" placeholder="Location Url" name="master_plan_image[]">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Features / Amenities</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Road" name="features_menities[]">
+                                            <label class="form-check-label">
+                                                Road
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="School" name="features_menities[]">
+                                            <label class="form-check-label">
+                                                School
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="College" name="features_menities[]">
+                                            <label class="form-check-label">
+                                                College
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Shopping" name="features_menities[]">
+                                            <label class="form-check-label">
+                                                Shopping
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="University" name="features_menities[]">
+                                            <label class="form-check-label">
+                                                University
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Hospital" name="features_menities[]">
+                                            <label class="form-check-label">
+                                                
+                                                Hospital
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="CCTV" name="features_menities[]">
+                                            <label class="form-check-label">
+                                                CCTV
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Swimming Pool" name="features_menities[]">
+                                            <label class="form-check-label">
+                                                Swimming Pool
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Gymnasium" name="features_menities[]">
+                                            <label class="form-check-label">
+                                                Gymnasium
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Indoor Games" name="features_menities[]">
+                                            <label class="form-check-label">
+                                                Indoor Games
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="24x7 Security" name="features_menities[]">
+                                            <label class="form-check-label">
+                                                24x7 Security
+                                            </label>
+                                        </div>
+
+                                        <!-- <input type="text" class="form-control" placeholder="Features / Amenities" value="" name="features_menities[]"> -->
+                                    </div>
+                                </div>
+
+                            </div>
 
                                 <button type="submit" class="btn btn-info btn-fill pull-right">Add Project</button>
                                 <div class="clearfix"></div>
