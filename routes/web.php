@@ -20,9 +20,14 @@ Route::get('upcoming-page',[FrontendController::class,'upcomingPage'])->name('up
 Route::group(['prefix' => 'admin'], function()
 {
     Route::get('/',[BackendController::class,'index'])->name('admin.index');
+    Route::get('login',[BackendController::class,'login'])->name('admin.login');
     Route::get('admin.inquery',[BackendController::class,'Inquerys'])->name('admin.inquery');
     Route::get('admin.contact',[BackendController::class,'Contacts'])->name('admin.contact');
     Route::get('admin.projects',[BackendController::class,'Projects'])->name('admin.projects');
     Route::post('admin.project-form',[BackendController::class,'projectSubmit'])->name('admin.project-form');
+    Route::get('edit-project',[BackendController::class,'editPoject'])->name('admin.edit-project');
+    Route::get('application',[BackendController::class,'application'])->name('admin.application');
+    Route::get('booking',[BackendController::class,'booking'])->name('admin.booking');
+    Route::get('view-ongoing-project',[BackendController::class,'viewOngoingProject'])->name('admin.view-ongoing-project');
 
 });
