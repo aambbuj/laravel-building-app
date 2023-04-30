@@ -258,29 +258,30 @@
             <div class="col-md-4">
                 <div class="stykey_top">
                     <h4>Contact Us for More Info</h4>
-                    <form>
+                    <form action="{{route('booking-add')}}" method="post" enctype="multipart/form-data">
+                        @csrf
                         <div class="row g-3">
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Name*">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Name*">
                                     <label for="name">Name*</label>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="phone" placeholder="Mobile Number*">
+                                    <input type="number" class="form-control" name="phone" id="phone" placeholder="Mobile Number*">
                                     <label for="phone">Number*</label>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Email*">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email*">
                                     <label for="email">Email*</label>
                                 </div>
                             </div> 
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                    <textarea class="form-control" name="message" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>

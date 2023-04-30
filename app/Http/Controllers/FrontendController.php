@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Information;
 use App\Models\Contact;
 use App\Models\Application;
-
+use App\Models\Booking;
 use App\Models\Project;
 use App\Models\ProjectDetails;
 use App\Models\ProjectImage;
@@ -73,6 +73,21 @@ class FrontendController extends Controller
         return redirect()->back()->with('success', 'Your Information send successfully !!');   
 
     }
+
+    public function bookingAdd(Request $request)
+    {
+        $booking = new  Booking();
+        $booking->name = $request->name;
+        $booking->email = $request->email;
+        $booking->phone = $request->phone;
+        $booking->subject = 'Booking';
+        $booking->message = $request->message;
+        $booking->save();
+        return redirect()->back()->with('success', 'Your Booking send successfully !!');   
+
+    }
+
+    
 
     public function aboutPage()
     {

@@ -47,7 +47,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
-        <a href="index.html" class="navbar-brand ps-5 me-0">
+        <a href="{{route('index')}}" class="navbar-brand ps-5 me-0">
             <img src="{{ url('assets/images/hiveconstructionWhite.png')}}" class="logo_site">
         </a>
         <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -84,9 +84,9 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="application_form.html">Application Form</a>
-                    <a class="btn btn-link" href="emi_calculator.html">EMI Calculator</a>
+                    <a class="btn btn-link" href="{{route('about-page')}}">About Us</a>
+                    <a class="btn btn-link" href="{{route('application-page')}}">Application Form</a>
+                    <a class="btn btn-link" href="{{route('emi-alculator-page')}}">EMI Calculator</a>
                     <a class="btn btn-link" href="">Terms & Condition</a> 
                 </div>
                 <div class="col-lg-3 col-md-5">
@@ -94,7 +94,7 @@
                     <a class="btn btn-link" href="{{route('ongoing-page')}}">Ongoing Project</a>
                     <a class="btn btn-link" href="{{route('complete-page')}}">Complete Project</a>
                     <a class="btn btn-link" href="{{route('upcoming-page')}}">Upcomming Project</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a> 
+                    <a class="btn btn-link" href="{{route('contact-page')}}">Contact Us</a> 
                 </div>
                 <div class="col-lg-3 col-md-6 nopadding">
                     <h5 class="text-white mb-4">Our Office</h5>
@@ -110,7 +110,6 @@
         </div>
     </div>
     <!-- Footer End -->
-
 
     <!-- Copyright Start -->
     <div class="container-fluid copyright bg-dark py-4">

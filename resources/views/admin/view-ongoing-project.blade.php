@@ -32,16 +32,18 @@
                                 <th>Action</th> 
                             </thead>
                             <tbody>
+                            @foreach($projectDetails as $projectDetail)
                                 <tr>
                                     <td style="width: 150px;">
-                                        <img class="see_project" src="https://hiveconstruction.in/assets/images/eco-stay2.jpg">
+                                        <img class="see_project" src="{{url($projectDetail->cover_photo)}}">
                                     </td>
-                                    <td>Eco stay</td>
+                                    <td>{{$projectDetail->site_name}}</td>
                                     <td>
-                                        <a href="{{route('admin.edit-project')}}" type="button" class="btn btn-primary btn-sm">Edit</a>
+                                        <a href="{{route('admin.edit-project',$type)}}" type="button" class="btn btn-primary btn-sm">Edit</a>
                                     </td> 
                                 </tr>
-                                <tr>
+                                @endforeach
+                                <!-- <tr>
                                     <td style="width: 150px;">
                                         <img class="see_project" src="https://hiveconstruction.in/assets/images/eco-stay2.jpg">
                                     </td>
@@ -49,7 +51,7 @@
                                     <td>
                                         <a href="" type="button" class="btn btn-primary btn-sm">Edit</a>
                                     </td> 
-                                </tr> 
+                                </tr>  -->
                             </tbody>
                         </table>
 

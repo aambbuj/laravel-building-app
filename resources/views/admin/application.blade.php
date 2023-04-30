@@ -19,12 +19,57 @@
         </div> 
     </div>
 </nav>
-<div class="content mt-5">
-    <div class="container-fluid mt-5"> 
+    <div class="content mt-5">
+        <div class="container-fluid mt-5">
+
         <div class="row mt-5">
-            <div class="col-md-12">
-            </div>
+                    <div class="col-md-12">
+                        <div class="card"> 
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                        <th>ID</th>
+                                    	<th>Name</th>
+                                    	<th>Phone</th>
+                                    	<th>Pan</th>
+                                    	<th>Aadher</th>
+                                    	<th>Flat number</th>
+                                    	<th>Flat area</th>
+                                    	<th>Cover car parking price</th>
+                                    	<th>Open car parking price</th>
+                                    	<th>Additional cost</th>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($applications as $key => $application )
+                                        <tr>
+                                        	<td>{{$key+1}}</td>
+                                        	<td>{{$application->application_name}}</td>
+                                        	<td>{{$application->phone_number}}</td>
+                                        	<td>
+                                                <img src="{{url($application->upload_pan)}}" height="60" width="60">
+                                                
+                                            </td>
+                                        	<td>
+                                            <img src="{{url($application->upload_aadher)}}" height="60" width="60">
+                                            
+                                            </td>
+                                        	<td>{{$application->flat_number}}</td>
+                                        	<td>{{$application->flat_area}}</td>
+                                        	<td>{{$application->cover_car_parking_price}}</td>
+                                        	<td>{{$application->open_car_parking_price}}</td>
+                                        	<td>{{$application->additional_cost}}</td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
         </div>
     </div>
-</div>
+        
 @endsection

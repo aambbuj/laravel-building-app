@@ -8,6 +8,7 @@ Route::get('/',[FrontendController::class,'index'])->name('index');
 Route::post('add-information',[FrontendController::class,'addInformation'])->name('add-information');
 Route::get('contact-page',[FrontendController::class,'contactPage'])->name('contact-page');
 Route::post('contact-add',[FrontendController::class,'contactAdd'])->name('contact-add');
+Route::post('booking-add',[FrontendController::class,'bookingAdd'])->name('booking-add');
 Route::get('about-page',[FrontendController::class,'aboutPage'])->name('about-page');
 Route::get('emi-alculator-page',[FrontendController::class,'emiCal'])->name('emi-alculator-page');
 Route::get('application-page',[FrontendController::class,'applicationForm'])->name('application-page');
@@ -19,15 +20,19 @@ Route::get('upcoming-page',[FrontendController::class,'upcomingPage'])->name('up
 
 Route::group(['prefix' => 'admin'], function()
 {
-    Route::get('/',[BackendController::class,'index'])->name('admin.index');
-    Route::get('login',[BackendController::class,'login'])->name('admin.login');
+
+    Route::get('/',[BackendController::class,'login'])->name('admin.login');
+    Route::post('login-page',[BackendController::class,'loginPage'])->name('admin.login-page');
+    Route::get('dashboard',[BackendController::class,'index'])->name('admin.dashboard');
     Route::get('admin.inquery',[BackendController::class,'Inquerys'])->name('admin.inquery');
     Route::get('admin.contact',[BackendController::class,'Contacts'])->name('admin.contact');
     Route::get('admin.projects',[BackendController::class,'Projects'])->name('admin.projects');
     Route::post('admin.project-form',[BackendController::class,'projectSubmit'])->name('admin.project-form');
-    Route::get('edit-project',[BackendController::class,'editPoject'])->name('admin.edit-project');
+    Route::post('admin.project-edit',[BackendController::class,'projectEdit'])->name('admin.project-edit');
     Route::get('application',[BackendController::class,'application'])->name('admin.application');
     Route::get('booking',[BackendController::class,'booking'])->name('admin.booking');
-    Route::get('view-ongoing-project',[BackendController::class,'viewOngoingProject'])->name('admin.view-ongoing-project');
+    Route::get('view-project/{type}',[BackendController::class,'viewOngoingProject'])->name('admin.view-project');
+    Route::get('edit-project/{type}',[BackendController::class,'editPoject'])->name('admin.edit-project');
+    
 
 });
