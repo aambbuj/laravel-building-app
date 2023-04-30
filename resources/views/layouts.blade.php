@@ -98,8 +98,9 @@
                 </div>
                 <div class="col-lg-3 col-md-6 nopadding">
                     <h5 class="text-white mb-4">Our Office</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Lalkuthi (Purbayan), Gopalpur, Kolkata-700136</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 7980857714</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Premises no 04-0686, plot no - AA IID/2901, Newtown,Tali park
+                            Street no.751, Near 11 no Tank, kol - 700136</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>7980857714 / 7439893022</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info.hiveconstruction@gmail.com</p>
                     <div class="d-flex pt-3"> 
                         <a class="btn btn-square btn-primary rounded-circle me-2" target="_blank" href="https://www.facebook.com/people/Hive-Construction/100090480018370/"><i class="fab fa-facebook-f"></i></a>
