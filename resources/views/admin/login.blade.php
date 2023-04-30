@@ -248,18 +248,19 @@ img {
 				<h1 class="text text-large">Sign In</h1>
 				 
 			</div>
-			<form name="signin" class="form">
+      <form action="{{route('admin.login-page')}}" class="form" method="post" enctype="multipart/form-data">
+      @csrf
 				<div class="input-control">
 					<label for="id" class="input-label" hidden>User Id</label>
-					<input type="text" name="id" id="id" class="input-field" placeholder="Enter User Id">
+					<input type="text" name="email" id="id" class="input-field" placeholder="Enter User Id">
 				</div>
 				<div class="input-control">
 					<label for="password" class="input-label" hidden>Password</label>
 					<input type="password" name="password" id="password" class="input-field" placeholder="Password">
 				</div>
 				<div class="input-control">
-					<a href="#" class="text text-links" style="visibility: hidden">Forgot Password</a>
-					<input type="submit" name="submit" class="input-submit" value="Sign In" disabled>
+					<!-- <a href="#" class="text text-links" style="visibility: hidden">Forgot Password</a> -->
+					<input type="submit" name="submit" class="input-submit" value="Sign In">
 				</div>
 			</form> 
 		</section>

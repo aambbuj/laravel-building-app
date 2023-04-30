@@ -24,13 +24,13 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="https://hiveconstruction.in" target="__blank" class="simple-text">
-                 HIVE Construction 
+                 {{Auth::user() ? Auth::user()->name : 'Unknown user pliz login once'}}
                 </a>
             </div>
 
             <ul class="nav">
                 <li >
-                    <a href="{{route('admin.index')}}">
+                    <a href="{{route('admin.dashboard')}}">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
@@ -73,9 +73,9 @@
                     </label>
                     <div class="menuTab-content">
                         <ul class="subMenu_sttle">
-                            <li><a style="color: black;" href="{{route('admin.view-ongoing-project')}}">Ongoing Project</a></li>
-                            <li>Complete Project</li>
-                            <li>Upcoming Project</li>
+                            <li><a style="color: black;" href="{{route('admin.view-project','ongoing')}}">Ongoing Project</a></li>
+                            <li><a style="color: black;" href="{{route('admin.view-project','complete')}}">Complete Project</a></li>
+                            <li><a style="color: black;" href="{{route('admin.view-project','upcoming')}}">Upcoming Project</a></li>
                         </ul>
                     </div>
                 </li> 

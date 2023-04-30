@@ -8,8 +8,10 @@ use App\Models\Contact;
 use App\Models\ProjectImage;
 use App\Models\ProjectDetails;
 use App\Models\masterPlan;
+use App\Models\Application;
 use App\Models\Project;
-
+use App\Models\Booking;
+use Illuminate\Support\Facades\Auth;
 class BackendController extends Controller
 {
     public function index()
@@ -17,27 +19,49 @@ class BackendController extends Controller
         return view('admin.index');
     }
 
-    public function editPoject()
+    public function editPoject($type)
     { 
-        return view('admin.edit-project');
+        $projectDetails  = Project::where('project_type',$type)->with(['image','details','master'])->first();
+        // $projects  = Project::with(['image','details','master'])->get();
+        // echo "<pre>";
+        // print_r($projectDetails);
+        // die;
+        $features_menities =  explode(",", $projectDetails['features_menities']);        
+        return view('admin.edit-project',compact('projectDetails','features_menities'));
     }
-    public function viewOngoingProject()
+    public function viewOngoingProject($type)
     { 
-        return view('admin.view-ongoing-project');
+      $projectDetails  = Project::where('project_type',$type)->with(['image','details','master'])->get();
+
+        return view('admin.view-ongoing-project',compact('projectDetails','type'));
     }
     public function application()
     { 
-        return view('admin.application');
+        $applications = Application::get();
+        return view('admin.application',compact('applications'));
     }
     public function booking()
     { 
-        return view('admin.booking');
+        $bookings = Booking::get();
+        return view('admin.booking',compact('bookings'));
     }
 
-    public function login()
+    public function login(Request  $request)
     { 
         return view('admin.login');
     }
+
+    public function loginPage(Request  $request)
+    { 
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            return redirect()->route('admin.dashboard');
+        }else{
+            return back()->withInput();
+        }
+       
+    }
+
+    
 
     public function Inquerys()
     {
@@ -164,5 +188,101 @@ class BackendController extends Controller
 
         }
         return redirect()->back()->with('success', 'Your Application save successfully !!');
+    }
+
+    public function projectEdit(Request $request)
+    {
+
+        $projectArr  = array(
+        'project_type' => $request->project_type,
+        'site_name' => $request->site_name,
+        'site_details' => $request->site_details,
+        'location' => $request->location,
+        'one_bhk' => $request->one_bhk,
+        'two_bhk' => $request->two_bhk,
+        'three_bhk' => $request->three_bhk,
+        'location_url' => $request->location_url,
+        'features_menities' => implode(",",$request->features_menities)
+        );
+
+        $projectUpdate = Project::where('id',$request->project_id)->update($projectArr);
+
+        if ($request->one_bhk == "yes") {
+            $oneBhkDetails = array(
+                "projects_id"=> $request->project_id,
+                "type_of_bhk"=> "1 BHK",
+                "bhk_type"=> $request->one_bhk_type,
+                "bhk_bedroom"=> $request->one_bhk_bedroom,
+                "bhk_bathroom"=> $request->one_bhk_bathroom,
+                "bhk_sqft"=> $request->one_bhk_sqft,
+                "status"=> 1,
+                
+            );
+
+            if ($request->details_id != "") {
+                ProjectDetails::where('id',$request->details_id)->update($oneBhkDetails);
+            } else {
+                ProjectDetails::create($oneBhkDetails);
+            }
+            
+        }
+
+        if ($request->two_bhk == "yes") {
+            $projectDetailsArrTwo= [
+                "projects_id"=> $request->project_id,
+                "type_of_bhk"=> "2 BHK",
+                "bhk_type"=> $request->two_bhk_type,
+                "bhk_bedroom"=> $request->two_bhk_bedroom,
+                "bhk_bathroom"=> $request->two_bhk_bathroom,
+                "bhk_sqft"=> $request->two_bhk_sqft,
+                "status"=> 1,
+
+            ];
+
+            if ($request->details_id_two != "") {
+                ProjectDetails::where('id',$request->details_id_two)->update($projectDetailsArrTwo);
+            } else {
+                ProjectDetails::create($projectDetailsArrTwo);
+            }
+        }
+
+        if ($request->three_bhk == "yes") {
+            $projectDetailsArrThree = [
+                "projects_id"=> $request->project_id,
+                "type_of_bhk"=> "3 BHK",
+                "bhk_type"=> $request->three_bhk_type,
+                "bhk_bedroom"=> $request->three_bhk_bedroom,
+                "bhk_bathroom"=> $request->three_bhk_bathroom,
+                "bhk_sqft"=> $request->three_bhk_sqft,
+                "status"=> 1,
+            ];
+
+            if ($request->details_id_three > 0  && isset($request->details_id_three)) {
+                ProjectDetails::where('id',$request->details_id_three)->update($projectDetailsArrThree);
+            } else {
+                ProjectDetails::create($projectDetailsArrThree);
+            }
+        }
+
+        if ($request->hasFile('master_plan_image')) {
+            $coverPhotoArr = [];
+
+            for ($k=0; $k <count($request->master_plan_image) ; $k++) { 
+
+                //////////////////////// pan card uploads //////////////////////
+                $fileback = $request->file('master_plan_image');
+                $destinationmaster_plan_image= 'master_plan_image';
+                $fileback[$k]->move($destinationmaster_plan_image,$fileback[$k]->getClientOriginalName());
+                ////////////////  AAdher card uploads //////////////////////
+
+                $coverPhotoArr [$k] = [
+                    "projects_id"=> $request->project_id,
+                    "master_plan_image" => $destinationmaster_plan_image."/".$fileback[$k]->getClientOriginalName(),
+                    "status" => 1,
+                ];
+            }
+            $applocatin = masterPlan::insert($coverPhotoArr);
+        }
+        return redirect()->route('admin.dashboard')->with('success', 'Your Application save successfully !!');
     }
 }
