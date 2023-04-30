@@ -15,7 +15,8 @@
                             <i class="fa fa-phone-alt fa-2x text-primary"></i>
                         </div>
                         <h4 class="mb-3">Phone Number</h4>
-                        <p class="mb-2">+91 7980857714</p> 
+                        <p class="mb-2">+91 7980857714</p>  
+                        <p class="mb-2">+91 7439893022 </p> 
                         <a class="btn btn-primary px-4" href="tel:+917980857714">Call Now <i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
@@ -35,7 +36,8 @@
                             <i class="fa fa-map-marker-alt fa-2x text-primary"></i>
                         </div>
                         <h4 class="mb-3">Office Address</h4>
-                        <p class="mb-2">Lalkuthi (Purbayan), Gopalpur, Kolkata-700136.Near Sitala kali Mandir.</p> 
+                        <p class="mb-2">Premises no 04-0686, plot no - AA IID/2901, Newtown,Tali park
+                            Street no.751, Near 11 no Tank, kol - 700136</p> 
                         <a class="btn btn-primary px-4" href="https://goo.gl/maps/Aksf7Rfn5NASTb2HA" target="blank">Direction <i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
