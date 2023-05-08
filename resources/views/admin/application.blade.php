@@ -35,9 +35,12 @@
                                     	<th>Aadher</th>
                                     	<th>Flat number</th>
                                     	<th>Flat area</th>
+                                    	<th>Sq Ft Rate Sb</th>
+                                    	<th>Flat Price</th>
                                     	<th>Cover car parking price</th>
                                     	<th>Open car parking price</th>
                                     	<th>Additional cost</th>
+                                    	<th>Total Price</th>
                                     </thead>
                                     <tbody>
                                         @foreach($applications as $key => $application )
@@ -55,9 +58,12 @@
                                             </td>
                                         	<td>{{$application->flat_number}}</td>
                                         	<td>{{$application->flat_area}}</td>
+                                        	<td>{{$application->sq_ft_rate_sb}}</td>
+                                        	<td>{{$application->flate_price}}</td>
                                         	<td>{{$application->cover_car_parking_price}}</td>
                                         	<td>{{$application->open_car_parking_price}}</td>
                                         	<td>{{$application->additional_cost}}</td>
+                                        	<td>{{$application->total_price}}</td>
                                         </tr>
                                         @endforeach
                                     </tbody>

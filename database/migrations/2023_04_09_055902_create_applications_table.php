@@ -19,9 +19,13 @@ return new class extends Migration
             $table->string('upload_aadher');
             $table->string('flat_number');
             $table->string('flat_area');
+            $table->string('sq_ft_rate_sb');
+            $table->string('flate_price');
             $table->string('cover_car_parking_price');
             $table->string('open_car_parking_price');
             $table->string('additional_cost');
+            $table->string('total_price');
+            $table->string('message');
             $table->string('status');
             $table->timestamps();
         });
