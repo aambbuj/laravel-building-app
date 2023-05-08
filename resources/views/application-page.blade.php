@@ -53,26 +53,54 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" name="flat_area" placeholder="Flat Area">
+                                <input type="number" class="form-control" name="flat_area" placeholder="Flat Area">
                                 <label for="name">Flat Area</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" name="cover_car_parking_price" placeholder="cover car parking price">
+                                <input type="number" class="form-control" name="sq_ft_rate_sb" placeholder="Sq ft rate S.B ">
+                                <label for="name">Sq ft rate S.B </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" name="flate_price" placeholder="flate_price">
+                                <label for="name">Flate Price</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" name="cover_car_parking_price" placeholder="cover car parking price">
                                 <label for="name">Cover car parking price</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" name="open_car_parking_price" placeholder="open car parking price">
+                                <input type="number" class="form-control" name="open_car_parking_price" placeholder="open car parking price">
                                 <label for="name">Open car parking price</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" name="additional_cost" placeholder="Additional cost">
-                                <label for="name">Additional cost</label>
+                                <input type="number" class="form-control" name="additional_cost" placeholder="Additional Price">
+                                <label for="name">Additional Price</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" name="total_price" placeholder="Total Flat Price">
+                                <label for="name">Total Flat Price</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="message" placeholder="Message">
+                                <label for="name">Message</label>
                             </div>
                         </div>
                         
@@ -88,6 +116,39 @@
     
 
     <script type="text/javascript">
+        var totalPrice = 0;
+        $("input[name=sq_ft_rate_sb]").keyup(function(){
+            if ($("input[name=flat_area]").val() > 0) {
+                let flatePrice = $("input[name=flat_area]").val() * $("input[name=sq_ft_rate_sb]").val();
+                $("input[name=flate_price]").val(flatePrice);
+            }else{
+                alert('pliz enter Flat area');
+            }
+        });
+
+        $("input[name=cover_car_parking_price]").keyup(function(){
+            let additional_cost = parseInt($("input[name=additional_cost]").val()) >0 ? parseInt($("input[name=additional_cost]").val()) : 0;
+            let open_car_parking_price = parseInt($("input[name=open_car_parking_price]").val()) >0 ? parseInt($("input[name=open_car_parking_price]").val()) : 0;
+            let cover_car_parking_price = parseInt($("input[name=cover_car_parking_price]").val()) >0 ? parseInt($("input[name=cover_car_parking_price]").val()) : 0;
+            $("input[name=total_price]").val( additional_cost + open_car_parking_price + cover_car_parking_price);
+        });
+
+        $("input[name=open_car_parking_price]").keyup(function(){
+            
+            let additional_cost = parseInt($("input[name=additional_cost]").val()) >0 ? parseInt($("input[name=additional_cost]").val()) : 0;
+            let open_car_parking_price = parseInt($("input[name=open_car_parking_price]").val()) >0 ? parseInt($("input[name=open_car_parking_price]").val()) : 0;
+            let cover_car_parking_price = parseInt($("input[name=cover_car_parking_price]").val()) >0 ? parseInt($("input[name=cover_car_parking_price]").val()) : 0;
+            $("input[name=total_price]").val( additional_cost + open_car_parking_price + cover_car_parking_price);
+        });
+
+        $("input[name=additional_cost]").keyup(function(){
+            
+            let additional_cost = parseInt($("input[name=additional_cost]").val()) >0 ? parseInt($("input[name=additional_cost]").val()) : 0;
+            let open_car_parking_price = parseInt($("input[name=open_car_parking_price]").val()) >0 ? parseInt($("input[name=open_car_parking_price]").val()) : 0;
+            let cover_car_parking_price = parseInt($("input[name=cover_car_parking_price]").val()) >0 ? parseInt($("input[name=cover_car_parking_price]").val()) : 0;
+            $("input[name=total_price]").val( additional_cost + open_car_parking_price + cover_car_parking_price);
+
+        });
         
         $("#rowAdder").click(function () {
             console.log()

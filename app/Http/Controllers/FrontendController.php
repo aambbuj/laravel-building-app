@@ -130,9 +130,13 @@ class FrontendController extends Controller
                     "upload_aadher" => $destinationPathAadher."/".$aadher[$j]->getClientOriginalName(),
                     "flat_number" => $request->flat_number,
                     "flat_area" => $request->flat_area,
+                    "sq_ft_rate_sb" => $request->sq_ft_rate_sb,
+                    "flate_price" => $request->flate_price,
                     "cover_car_parking_price" => $request->cover_car_parking_price,
                     "open_car_parking_price" => $request->open_car_parking_price,
                     "additional_cost" => $request->additional_cost,
+                    "total_price" => $request->total_price,
+                    "message" => $request->message,
                     "status" => 1,
                 ];
             }
