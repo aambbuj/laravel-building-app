@@ -101,7 +101,7 @@ class BackendController extends Controller
         $project->two_bhk = $request->two_bhk;
         $project->three_bhk = $request->three_bhk;
         $project->location_url = $request->location_url;
-        $project->features_menities = implode(",",$request->features_menities);
+        $project->features_menities = $request->features_menities ? implode(",",$request->features_menities) : '';
         $project->cover_photo = $destinationPath."/".$file->getClientOriginalName();
         $project->status = 1;
         $project->save();
