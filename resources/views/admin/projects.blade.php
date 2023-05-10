@@ -295,6 +295,55 @@
                                                 24x7 Security
                                             </label>
                                         </div>
+ 
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Automatic Lift" name="features_menities[]">
+                                            <label class="form-check-label">
+                                                Automatic Lift
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="24 Hrs Water Supply" name="features_menities[]">
+                                            <label class="form-check-label">
+                                            24 Hrs Water Supply
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Two Wheeler Parking" name="features_menities[]">
+                                            <label class="form-check-label">
+                                            Two Wheeler Parking
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Four Wheeler Parking" name="features_menities[]">
+                                            <label class="form-check-label">
+                                            Four Wheeler Parking
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Power Backup" name="features_menities[]">
+                                            <label class="form-check-label">
+                                            Power Backup
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Iron Filter" name="features_menities[]">
+                                            <label class="form-check-label">
+                                            Iron Filter
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="loan" name="features_menities[]">
+                                            <label class="form-check-label"> 
+                                                Easy Loan facility
+                                            </label>
+                                        </div>
 
                                         <!-- <input type="text" class="form-control" placeholder="Features / Amenities" value="" name="features_menities[]"> -->
                                     </div>
