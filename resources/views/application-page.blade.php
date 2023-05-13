@@ -66,7 +66,7 @@
 
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="number" class="form-control" required name="flate_price" placeholder="flate_price">
+                                <input type="number" readonly class="form-control" required name="flate_price" placeholder="flate_price">
                                 <label for="name">Flate Price</label>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
 
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="number" class="form-control" required name="total_price" placeholder="Total Flat Price">
+                                <input type="number" readonly class="form-control" required name="total_price" placeholder="Total Flat Price">
                                 <label for="name">Total Flat Price</label>
                             </div>
                         </div>

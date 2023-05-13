@@ -17,12 +17,13 @@
                         </div>
                         <div class="property-wrap-details">
                             <h4 style="text-align:center;"><a href="">{{$projectDetail->site_name}}</a></h4>
-                            <!-- <span class="price" style="font-size: 13px;text-align:center;">Lalkuthi(Purbayan),Gopalpur, Kolkata-700136.</span> -->
-                            <!-- <div class="meta meta-2">
-                                <span><i class="fas fa-bed"></i>2 BHK</span>
-                                <span><i class="fas fa-bed"></i>3 BHK</span>
-                                <span class="mr-0"><i class="fas fa-expand"></i>1194 sqft</span>
-                            </div> -->
+                            <span class="price" style="font-size: 13px;text-align:center;">{{$projectDetail->location}}</span>
+                            <div class="meta meta-2">
+                                @foreach($projectDetail->details as $detail)
+                                <span><i class="fas fa-bed"></i>{{$detail->type_of_bhk}}</span>
+                                @endforeach
+                                <!-- <span class="mr-0"><i class="fas fa-expand"></i>1194 sqft</span> -->
+                            </div>
                             <div class="btn-area">
                                 <a class="btn btn-primary" href="{{route('details-view',$projectDetail->id)}}">View Details</a>
                                 <a class="btn btn-primary" href="mailto:info.hiveconstruction@gmail.com"><i class="fa fa-envelope"></i></a>

@@ -27,7 +27,8 @@
                     </div>
 
                     <div class="site_info mt-4">
-                        <h3>{{$projectDetails->location}}</h3>
+                        <h3>{{$projectDetails->site_name}}</h3>
+                        <h6>{{$projectDetails->location}}</h6>
                         <p>{{$projectDetails->site_details}}</p>
                     </div>
 

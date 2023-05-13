@@ -583,3 +583,29 @@ h5.sm-title {
     margin-bottom: -10px;
     fill: white;
 }
+.complited_slider .owl-nav .owl-prev{
+  background: #fff;
+  position: absolute;
+  top:-13%;
+  left:15px;
+  padding: 5px 22px 5px 22px;
+  border-radius: 50px;
+  box-shadow: 3px 14px 25px -10px #92b4d0;
+  transition: background 0.5s ease 0s;
+  text-transform: capitalize;
+}
+.complited_slider .owl-nav .owl-next{
+  background: #fff;
+  position: absolute;
+  top:-13%;
+  right: 15px;
+  padding: 5px 22px 5px 22px;
+  border-radius: 50px;
+  box-shadow: -3px 14px 25px -10px #92b4d0;
+  transition: background 0.5s ease 0s;
+  text-transform: capitalize;
+}
+.extra-shadow {
+  background: #02245b !important;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
