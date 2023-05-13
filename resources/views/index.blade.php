@@ -123,7 +123,7 @@
                 <h3 class="display-5 text-uppercase" style="padding-top: 20px;">Complete Project</h3>
             </div>
             <div class="owl-slider">
-                <div id="carousel" class="owl-carousel">
+                <div id="carousel" class="owl-carousel complited_slider">
                 @foreach($projectDetails as $key => $projectDetail)
                 @if($projectDetail->project_type == 'complete')
                     <div class="item">
@@ -132,13 +132,12 @@
                                 <img src="{{$projectDetail->cover_photo}}" alt="img">
                             </div>
                             <div class="property-wrap-details">
-                                <h4 style="text-align:center;"><a href="eco-stay.html"> {{$projectDetail->project_type}}</a></h4>
+                                <h4 style="text-align:center;"><a href="eco-stay.html"> {{$projectDetail->site_name}}</a></h4>
                                 <span class="price" style="font-size: 13px;text-align:center;"> {{$projectDetail->location}}</span>
                                 <div class="meta meta-2">
                                     @foreach($projectDetail->details as $details)
                                     <span><i class="fas fa-bed"></i>{{$details->type_of_bhk}}</span>
-                                    @endforeach
-                                    <!-- <span class="mr-0"><i class="fas fa-expand"></i>{{$details->bhk_sqft}} sqft</span> -->
+                                    @endforeach 
                                 </div>
                                 <div class="btn-area">
                                     

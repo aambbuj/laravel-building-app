@@ -57,7 +57,9 @@
         autoHeight: true,
         autoplayTimeout: 7000,
         smartSpeed: 800,
-        nav: true,
+        nav: true, 
+        navigation: true,
+        navigationText: ["", ""],
         responsive: {
         0: {
             items: 1 
