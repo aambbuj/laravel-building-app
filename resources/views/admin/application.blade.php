@@ -24,8 +24,8 @@
 
         <div class="row mt-5">
                     <div class="col-md-12">
-                        <div class="card"> 
-                            <div class="content table-responsive table-full-width">
+                        <div class="card" style="    overflow: hidden;"> 
+                            <div class="table-responsive" style="overflow: auto;">
                                 <table class="table table-hover table-striped">
                                     <thead>
                                         <th>ID</th>
@@ -40,7 +40,7 @@
                                     	<th>Cover car parking price</th>
                                     	<th>Open car parking price</th>
                                     	<th>Additional cost</th>
-                                    	<th>Total Price</th>
+                                    	<th>Total Price</th> 
                                     </thead>
                                     <tbody>
                                         @foreach($applications as $key => $application )
