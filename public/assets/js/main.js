@@ -76,6 +76,12 @@
 })(jQuery);
  
 $(document).ready(function () {
+ 
+
+    $(".nav-item").on('click', function(event){
+      $("a.active").removeClass("active");
+      $(this).addClass('active');
+    });
 
     var sync1 = $("#sync1");
     var sync2 = $("#sync2");
@@ -154,3 +160,5 @@ $(document).ready(function () {
       sync1.data('owl.carousel').to(number, 300, true);
     });
   });
+
+ 

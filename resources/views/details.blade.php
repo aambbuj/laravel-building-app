@@ -6,7 +6,7 @@
     }
 </style>
 
-    <div class="container mt-5">
+    <div class="container">
         <div class="row">
             <div class="col-md-8">
                 <div>
@@ -208,6 +208,97 @@
                                     </div>
                                     <div class="media-body">
                                         <h6>Indoor Games</h6>
+                                        <p>Yes</p>
+                                    </div>
+                                </div>
+                            </div>
+                            @elseif($features == "Automatic Lift")
+
+                            <div class="col-lg-4 col-md-4 col-6  mb-4">
+                                <div class="media">
+                                    <div class="icon">
+                                        <img src="{{url ('assets/images/lift.png')}}" alt="img">
+                                    </div>
+                                    <div class="media-body">
+                                        <h6>Automatic Lift</h6>
+                                        <p>Yes</p>
+                                    </div>
+                                </div>
+                            </div>
+                            @elseif($features == "24 Hrs Water Supply")
+
+                            <div class="col-lg-4 col-md-4 col-6  mb-4">
+                                <div class="media">
+                                    <div class="icon">
+                                        <img src="{{url ('assets/images/water.png')}}" alt="img">
+                                    </div>
+                                    <div class="media-body">
+                                        <h6>24 Hrs Water Supply</h6>
+                                        <p>Yes</p>
+                                    </div>
+                                </div>
+                            </div>
+                            @elseif($features == "Two Wheeler Parking")
+
+                            <div class="col-lg-4 col-md-4 col-6  mb-4">
+                                <div class="media">
+                                    <div class="icon">
+                                        <img src="{{url ('assets/images/bike.png')}}" alt="img">
+                                    </div>
+                                    <div class="media-body">
+                                        <h6>Two Wheeler Parking</h6>
+                                        <p>Yes</p>
+                                    </div>
+                                </div>
+                            </div>
+                            @elseif($features == "Four Wheeler Parking")
+
+                            <div class="col-lg-4 col-md-4 col-6  mb-4">
+                                <div class="media">
+                                    <div class="icon">
+                                        <img src="{{url ('assets/images/parking-area.png')}}" alt="img">
+                                    </div>
+                                    <div class="media-body">
+                                        <h6>Four Wheeler Parking</h6>
+                                        <p>Yes</p>
+                                    </div>
+                                </div>
+                            </div>
+                            @elseif($features == "Power Backup")
+
+                            <div class="col-lg-4 col-md-4 col-6  mb-4">
+                                <div class="media">
+                                    <div class="icon">
+                                        <img src="{{url ('assets/images/power.png')}}" alt="img">
+                                    </div>
+                                    <div class="media-body">
+                                        <h6>Power Backup</h6>
+                                        <p>Yes</p>
+                                    </div>
+                                </div>
+                            </div>
+                            @elseif($features == "Iron Filter")
+
+                            <div class="col-lg-4 col-md-4 col-6  mb-4">
+                                <div class="media">
+                                    <div class="icon">
+                                        <img src="{{url ('assets/images/filter.png')}}" alt="img">
+                                    </div>
+                                    <div class="media-body">
+                                        <h6>Iron Filter</h6>
+                                        <p>Yes</p>
+                                    </div>
+                                </div>
+                            </div>
+                            @elseif($features == "loan")
+
+                            <div class="col-lg-4 col-md-4 col-6  mb-4">
+                                <div class="media">
+                                    <div class="icon">
+                                        <img src="{{url ('assets/images/loan.png')}}" alt="img">
+                                    </div>
+                                    <div class="media-body">
+                                        <h6>Easy Loan facility</h6>
                                         <p>Yes</p>
                                     </div>
                                 </div>
