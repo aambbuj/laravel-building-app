@@ -8,6 +8,21 @@
      <!-- Contact Start -->
      <div class="container-xxl py-5">
         <div class="container">
+        @if ($message = Session::get('success'))
+        <div class="alert alert-success alert-block">
+            <!-- <button type="button" class="close" data-dismiss="alert">×</button>	 -->
+                <strong>{{ $message }}</strong>
+        </div>
+        @endif
+
+
+        @if ($message = Session::get('error'))
+        <div class="alert alert-danger alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>	
+                <strong>{{ $message }}</strong>
+        </div>
+        @endif
+
             <div class="row g-5 justify-content-center mb-5">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="bg-light text-center h-100 p-5">

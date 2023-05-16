@@ -29,6 +29,19 @@ class BackendController extends Controller
         $features_menities =  explode(",", $projectDetails['features_menities']);        
         return view('admin.edit-project',compact('projectDetails','features_menities'));
     }
+
+    public function deleteProject($id)
+    { 
+        $projectDetails  = Project::where('id',$id)->delete();
+        // $projects  = Project::with(['image','details','master'])->get();
+        // echo "<pre>";
+        // print_r($projectDetails);
+        // die;      
+        return redirect()->back()->with('error', 'Your Application delete successfully !!');
+    }
+
+
+    
     public function viewOngoingProject($type)
     { 
       $projectDetails  = Project::where('project_type',$type)->with(['image','details','master'])->get();
@@ -193,6 +206,27 @@ class BackendController extends Controller
     public function projectEdit(Request $request)
     {
 
+        // print_r($request->bakgroung_image);
+        // die;
+
+        if ($request->bakgroung_image != "") {
+            $coverPhotoArr = [];
+
+            foreach ($request->bakgroung_image as $id => $value) {
+
+
+                $fileback = $request->file('bakgroung_image');
+                $destinationPathback = 'bakgroung_images';
+
+
+                $value[0]->move($destinationPathback,$value[0]->getClientOriginalName());
+                // ////////////////  AAdher card uploads //////////////////////
+
+
+                $applocatin = ProjectImage::where('id',$id)->update(["bakgroung_image" => $destinationPathback."/".$value[0]->getClientOriginalName()]);
+            }
+        }
+
         $projectArr  = array(
         'project_type' => $request->project_type,
         'site_name' => $request->site_name,
@@ -202,10 +236,21 @@ class BackendController extends Controller
         'two_bhk' => $request->two_bhk,
         'three_bhk' => $request->three_bhk,
         'location_url' => $request->location_url,
-        'features_menities' => implode(",",$request->features_menities)
+        'features_menities' => implode(",",$request->features_menities),
         );
 
+        if ($request->hasFile('cover_photo')) {
+            $file = $request->file('cover_photo');
+            $destinationPath = 'cover_photos';
+            $file->move($destinationPath,$file->getClientOriginalName());
+            $projectArr  = ['cover_photo' => $destinationPath."/".$file->getClientOriginalName()];
+
+        }
+
+
         $projectUpdate = Project::where('id',$request->project_id)->update($projectArr);
+
+
 
         if ($request->one_bhk == "yes") {
             $oneBhkDetails = array(
@@ -283,6 +328,6 @@ class BackendController extends Controller
             }
             $applocatin = masterPlan::insert($coverPhotoArr);
         }
-        return redirect()->route('admin.dashboard')->with('success', 'Your Application save successfully !!');
+        return redirect()->back()->with('success', 'Your Application update successfully !!');;
     }
 }
