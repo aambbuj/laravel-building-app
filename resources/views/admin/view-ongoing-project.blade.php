@@ -23,6 +23,20 @@
     <div class="container-fluid mt-5">
         <div class="row mt-5">
             <div class="col-md-12">
+            @if ($message = Session::get('success'))
+        <div class="alert alert-success alert-block">
+            <!-- <button type="button" class="close" data-dismiss="alert">×</button>	 -->
+                <strong>{{ $message }}</strong>
+        </div>
+        @endif
+
+
+        @if ($message = Session::get('error'))
+        <div class="alert alert-danger alert-block">
+                <strong>{{ $message }}</strong>
+        </div>
+        @endif
+
                 <div class="card"> 
                     <div class="content table-responsive table-full-width" style="padding-bottom: 0px;">
                         <table class="table">
@@ -40,6 +54,8 @@
                                     <td>{{$projectDetail->site_name}}</td>
                                     <td>
                                         <a href="{{route('admin.edit-project',$type)}}" type="button" class="btn btn-primary btn-sm">Edit</a>
+                                        <a href="{{route('admin.delete-project',$projectDetail->id)}}" type="button" class="btn btn-danger btn-sm">Delete</a>
+
                                     </td> 
                                 </tr>
                                 @endforeach

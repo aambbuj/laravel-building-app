@@ -29,6 +29,20 @@
     <div class="container-fluid mt-5"> 
         <div class="row mt-5">
             <div class="col-md-12">
+            @if ($message = Session::get('success'))
+        <div class="alert alert-success alert-block">
+            <!-- <button type="button" class="close" data-dismiss="alert">×</button>	 -->
+                <strong>{{ $message }}</strong>
+        </div>
+        @endif
+
+
+        @if ($message = Session::get('error'))
+        <div class="alert alert-danger alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>	
+                <strong>{{ $message }}</strong>
+        </div>
+        @endif
                 <div class="card"> 
                     <form action="{{route('admin.project-edit')}}" method="post" enctype="multipart/form-data">
                         @csrf
@@ -56,7 +70,7 @@
                                     <div class="form-group">
                                         <label>Cover Photo</label>
                                         <img style="width: 100%" src="{{url($projectDetails->cover_photo)}}">
-                                        <!-- <input type="file" class="form-control" name="cover_photo"> -->
+                                        <input type="file" class="form-control" name="cover_photo">
                                     </div>
                                 </div>
                                 @foreach($projectDetails->image as $key =>  $projectDetail)
@@ -64,10 +78,11 @@
                                     <div class="form-group">
                                         <!-- <label>Baground Photo One</label> -->
                                         <img style="width: 100%" src="{{url($projectDetail->bakgroung_image)}}">
-                                        <!-- <input type="file" class="form-control" name=" " placeholder="Select backgroung image" > -->
+                                        <input type="file" class="form-control" name="bakgroung_image[{{$projectDetail->id}}][]" placeholder="Select backgroung image" >
                                     </div>
                                 </div>
                                 @endforeach
+                                
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Site Details</label>

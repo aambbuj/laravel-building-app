@@ -48,7 +48,15 @@
 
     <div class="container mb-5">
         <div class="row justify-content-md-center">
+
             <div class="col-md-10">
+            @if ($message = Session::get('success'))
+        <div class="alert alert-success alert-block">
+            <!-- <button type="button" class="close" data-dismiss="alert">×</button>	 -->
+                <strong>{{ $message }}</strong>
+        </div>
+        @endif
+        
             <form action="{{route('add-information')}}" method="post">
                 @csrf
                 <div class="row slide_up_slider_form">
