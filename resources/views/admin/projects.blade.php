@@ -48,7 +48,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Project Type</label>
-                                        <select class="form-control" placeholder="Select Project Type" name="project_type">
+                                        <select class="form-control" required placeholder="Select Project Type" name="project_type">
                                             <option> Select</option>
                                             <option value="ongoing">Ongoing Project</option>
                                             <option value="complete">Complete Project</option>
@@ -59,31 +59,31 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Site Name</label>
-                                        <input type="text" class="form-control" placeholder="Site Name" name="site_name">
+                                        <input type="text"required class="form-control" placeholder="Site Name" name="site_name">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Cover Photo</label>
-                                        <input type="file" class="form-control" name="cover_photo">
+                                        <input type="file" required class="form-control" name="cover_photo">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Baground Photo One</label>
-                                        <input type="file" class="form-control" name="bakgroung_image[]" placeholder="Select backgroung image" >
+                                        <input type="file" required class="form-control" name="bakgroung_image[]" placeholder="Select backgroung image" >
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Baground Photo Two</label>
-                                        <input type="file" class="form-control" name="bakgroung_image[]" placeholder="Select backgroung image" >
+                                        <input type="file" required class="form-control" name="bakgroung_image[]" placeholder="Select backgroung image" >
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Baground Photo Three</label>
-                                        <input type="file" class="form-control" name="bakgroung_image[]" placeholder="Select backgroung image" >
+                                        <input type="file" required class="form-control" name="bakgroung_image[]" placeholder="Select backgroung image" >
                                     </div>
                                 </div>
                                 <div class="col-md-12">

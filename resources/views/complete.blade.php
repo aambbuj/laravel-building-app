@@ -24,7 +24,9 @@
                                 <!-- <span class="mr-0"><i class="fas fa-expand"></i>1194 sqft</span> -->
                             </div>
                             <div class="btn-area">
+                                @if( count($projectDetail->details) > 0)
                                 <a class="btn btn-primary" href="{{route('details-view',$projectDetail->id)}}">View Details</a>
+                                @endif
                                 <a class="btn btn-primary" href="mailto:info.hiveconstruction@gmail.com"><i class="fa fa-envelope"></i></a>
                                 <a class="btn btn-primary" href="tel:+917980857714"><i class="fa fa-phone" ></i></a>
                             </div>

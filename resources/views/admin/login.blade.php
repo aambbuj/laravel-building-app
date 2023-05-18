@@ -248,6 +248,22 @@ img {
 				<h1 class="text text-large">Sign In</h1>
 				 
 			</div>
+
+      @if ($message = Session::get('success'))
+        <div class="alert alert-success alert-block">
+            <!-- <button type="button" class="close" data-dismiss="alert">×</button>	 -->
+                <strong>{{ $message }}</strong>
+        </div>
+        @endif
+
+
+        @if ($message = Session::get('error'))
+        <div class="alert alert-danger alert-block">
+            <!-- <button type="button" class="close" data-dismiss="alert">×</button>	 -->
+                <strong style="color:red">{{ $message }}</strong>
+        </div>
+        @endif
+
       <form action="{{route('admin.login-page')}}" class="form" method="post" enctype="multipart/form-data">
       @csrf
 				<div class="input-control">
