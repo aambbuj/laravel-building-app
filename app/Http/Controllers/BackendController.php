@@ -69,7 +69,9 @@ class BackendController extends Controller
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             return redirect()->route('admin.dashboard');
         }else{
-            return back()->withInput();
+            // return back()->withInput();
+            return redirect()->back()->withInput()->with('error', 'Email and Password is wrong , please try again !!');
+
         }
        
     }
