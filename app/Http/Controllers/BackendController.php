@@ -231,14 +231,14 @@ class BackendController extends Controller
 
         $projectArr  = array(
         'project_type' => $request->project_type,
-        'site_name' => $request->site_name,
+        // 'site_name' => $request->site_name,
         'site_details' => $request->site_details,
         'location' => $request->location,
         'one_bhk' => $request->one_bhk,
         'two_bhk' => $request->two_bhk,
         'three_bhk' => $request->three_bhk,
         'location_url' => $request->location_url,
-        'features_menities' => implode(",",$request->features_menities),
+        'features_menities' => $request->features_menities ? implode(",",$request->features_menities):"",
         );
 
         if ($request->hasFile('cover_photo')) {

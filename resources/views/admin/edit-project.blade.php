@@ -91,7 +91,7 @@
                                 </div> 
                             </div> 
                             <div class="row">
-                                @if($projectDetails->one_bhk == 'yes')
+                                @if($projectDetails->one_bhk == 'yes' && isset($projectDetails->details[0]))
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>1 BHK</label>
@@ -175,7 +175,7 @@
 
                                 @endif
 
-                                @if($projectDetails->two_bhk == 'yes')
+                                @if($projectDetails->two_bhk == 'yes' && isset($projectDetails->details[1]))
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>2 BHK</label>
@@ -259,7 +259,7 @@
 
                                 @endif
 
-                                @if($projectDetails->three_bhk == 'yes')
+                                @if($projectDetails->three_bhk == 'yes' && isset($projectDetails->details[2]) )
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>3 BHK</label>
