@@ -24,7 +24,7 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="https://hiveconstruction.in" target="__blank" class="simple-text">
-                 {{Auth::user() ? Auth::user()->name : 'Unknown user pliz login once'}}
+                 {{Auth::user() ? Auth::user()->name : 'Unknown user Please login once'}}
                 </a>
             </div>
 

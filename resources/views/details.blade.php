@@ -73,13 +73,14 @@
                             </tbody>
                           </table>                             
                     </div>
-
+                @if($projectDetails->location_url)
                     <div class="location-area mt-5">
                         <h5 class="sm-title">Location</h5>
                         <div class="location-map"> 
-                            <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d58933.3822595844!2d88.4367406238838!3d22.603910152480992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sLalkuthi%20(Purbayan)%2C%20Gopalpur%2C%20Kolkata-700136.%20eco%20stay%20near%20D%2Czio%20college%20rajarhat!5e0!3m2!1sen!2sin!4v1677475058347!5m2!1sen!2sin" style="border:0;" allowfullscreen=""></iframe>
+                            <iframe class="w-100" src="{{$projectDetails->location_url}}" style="border:0;" allowfullscreen=""></iframe>
                         </div>                            
                     </div>
+                @endif    
 
                     <div class="location-area mt-5">
                         <h5 class="sm-title">Features / Amenities </h5>
