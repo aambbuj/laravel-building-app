@@ -15,7 +15,7 @@
 <nav class="navbar navbar-default navbar-fixed">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" >OnGoing project</a>
+            <a class="navbar-brand" >Project List</a>
         </div> 
     </div>
 </nav>
@@ -53,7 +53,7 @@
                                     </td>
                                     <td>{{$projectDetail->site_name}}</td>
                                     <td>
-                                        <a href="{{route('admin.edit-project',$type)}}" type="button" class="btn btn-primary btn-sm">Edit</a>
+                                        <a href="{{route('admin.edit-project',$projectDetail->id)}}" type="button" class="btn btn-primary btn-sm">Edit</a>
                                         <a href="{{route('admin.delete-project',$projectDetail->id)}}" type="button" class="btn btn-danger btn-sm">Delete</a>
 
                                     </td> 

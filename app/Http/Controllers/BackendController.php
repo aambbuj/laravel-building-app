@@ -21,7 +21,7 @@ class BackendController extends Controller
 
     public function editPoject($type)
     { 
-        $projectDetails  = Project::where('project_type',$type)->with(['image','details','master'])->first();
+        $projectDetails  = Project::where('id',$type)->with(['image','details','master'])->first();
         // $projects  = Project::with(['image','details','master'])->get();
         // echo "<pre>";
         // print_r($projectDetails);
